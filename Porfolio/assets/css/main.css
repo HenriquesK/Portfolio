@@ -21,8 +21,8 @@ section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
+	font-size: 105%;
+	font-family: "Times New Roman", Times, serif;
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
@@ -176,7 +176,7 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 3em 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -3387,7 +3387,7 @@ input, select, textarea {
 			flex-shrink: 0;
 			display: block;
 			margin: 0 0 2em 4em;
-			width: 50%;
+			width: 25%;
 		}
 
 			#banner .image img {
