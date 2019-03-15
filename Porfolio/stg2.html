@@ -47,7 +47,7 @@
                                     <p>Ne connaissant pas ce framework, dans un premier temps j'ai bénéficier d'une formation pendant 15 jours qui m'a permis de me familiariser avec mon nouvel environnement. J'ai donc suivi le tutoriel cakePHP 3 et je me suis inicier en créant les interfaces du tutoriel tout en comprenant comment ce MVC communiquait pour afficher les informations à l'écran et récupérer les données sql. Puis ayant fini le tutoriel, mon tuteur de stage me demanda de perfectionner ces interfaces pour les lier entre elles et mettre en place une sécurité.</p>
                                      <span class="images_petit"><img src="images/" alt="" /></span>
                                     <hr class="major" />
-                                    <h2>Projet du stage</h2>
+                                    <h2>Projet du stage : Mise en place</h2>
                                     <span class="images_petit"><img src="images/MysqlWorkbench.jpeg" alt="" /></span>
                                     <p>Le projet que mon tuteur m'a donné consiste a créer une interface qui permet à des utilisateur d'insérer, d'actualiser et de récuperer des fichiers "encours" dans une base 
                                     de donnée. Dans un premier temps, je devais réfléchir à l'éllaborations d'une base de donnée en tenant compte de ce que demandais le cahier des charges.Pour réaliser le MCD de la base de donnée j'ai utilisé
@@ -55,8 +55,28 @@
                                     j'ai fait quelques esquisses au brouillon puis j'ai utilisé un wireframe pour faire ma maquette. Tout ce travail a été mis dans un compte-rendu technique afin de présenter à mon tuteur
                                     afin qu'il me donne le feu vert pour commencer à programmer.</br></p>
                                     <h3><u>Compte-rendu technique :</u></h3>
-                                    <a href="Compte-rendu technique.odt">Compte-rendu préparation projet</a>
-				    <span class="images_petit"><img src="images/" alt="" /></span>
+                                    <a href="Compte-rendu technique.odt">Compte-rendu préparatoire du projet</a>
+                                    <h3><u>Projet du stage : Réalisation</u></h3>
+                                    <p>Après avoir discuté de la manière dont je voyais la résolution du problème avec mon tuteur, il m'a donné des directives à suivre pour la réalisation de ce projet. En effet cette application
+                                    devra avoir de fonctionnalités obligatoires : </br>
+                                    -Une méthode qui permettera la modification de l'etat d'un fichier préalablment inserer dans une base de donnée.</br>
+                                    -Une méthode qui permettera à un utilisateur de pouvoir avoir accès à son fichier et modifier certains paramètres en cas de problème. </p>
+                                    <h3><u>Première méthode : GetEncours()</u></h3>
+                                    <p>Cette méthode est la plus simple à mettre en place. En effet il suffit juste de récupérer un fichier demandé dans une authentification via 2 paramètres (caisse, clé primaire) puis de l'afficher dans une page.
+                                    Dans cette page, on pourra trouver un lien qui donnera sur une page où on pourra modifier l'etat du fichier. Ce qui suis est le cheminement de la methode GetEncours()</p></br>
+                                    
+				    <span class="images_petit"><img src="images/Accueil1.png" alt="" /></span></br>
+				    <p>Cette page est la barre d'action de la page principale. C'est à cet endroit que la méthode getEncours() sera lancé.</p></br>
+				     <hr class="major" />
+				    <span class="images_petit"><img src="images/authentification1.png" alt="" /></span></br>
+				    Cette page permet de récuperer le detail d'un encours grâce au nom de la caisse et à la clé primaire de la table.  </br>
+				     <hr class="major" />
+				    <span class="images_petit"><img src="images/Encours.png" alt="" /></span></br>
+				    Cette page est le résultat de l'authentification précédente, on y retrouve tout le détails d'un enregistrement de la table.</br>
+				     <hr class="major" />	    
+				    <span class="images_petit"><img src="images/Methode.png" alt="" /></span></br>
+				    On peut considérer cette page comme une méthode edit(). Elle permet de récupérer la clé étrangère ID_etat, de la modifier ce qui permettera de mettre à jour son libelle qui se trouve dans une autre table.</br> 
+				    
 									
                             </section>
 
