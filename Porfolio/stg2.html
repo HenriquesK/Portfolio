@@ -37,14 +37,15 @@
                                     <p><u>Présentation :</u></p>
                                     <span class="images_petit"><img src="images/cakephp.png" alt="" /></span>
                                     
-                                    <p>CakePHP 3 est un framework pour le développement web qui fonctionne avec PHP 7.2.Ce framework suis les codes du MVC (Modèle, Vue, Controller) comme CodeIgniter ou autres framework. Il contient des foncionnalité très intéréssante :</br>
+                                    <p>CakePHP 3 est un framework pour le développement web qui fonctionne avec PHP 7.2.Ce framework suis les codes du MVC (Modèle, Vue, Controller) comme CodeIgniter ou autres framework. Il contient des foncionnalité très intéréssante:</br>
                                       -Rapide et flexible avec un moteur de templates utilisant la syntaxe PHP et apportant des classes utilitaires (des "helpers") facilitant le formatage (utilisation de AJAX, JavaScript, HTML, des formulaires et bien d'autres).</br>
                                       -Fonctionne dans n'importe quel sous-répertoire pour peu qu'il y soit accessible via un serveur HTTP tel que Apache.</br>
 									  -Composants de sécurité, de gestion des droits et de gestion des sessions.</br>
 									</p>
                                     
 									
-                                    <p>Ne connaissant pas ce framework, dans un premier temps j'ai bénéficier d'une formation pendant 15 jours qui m'a permis de me familiariser avec mon nouvel environnement. J'ai donc suivi le tutoriel cakePHP 3 et je me suis inicier en créant les interfaces du tutoriel tout en comprenant comment ce MVC communiquait pour afficher les informations à l'écran et récupérer les données sql. Puis ayant fini le tutoriel, mon tuteur de stage me demanda de perfectionner ces interfaces pour les lier entre elles et mettre en place une sécurité.</p>
+                                    <p>Ne connaissant pas ce framework, dans un premier temps j'ai bénéficier d'une formation pendant 15 jours qui m'a permis de me familiariser avec mon nouvel environnement. J'ai donc suivi le tutoriel cakePHP 3 et je me suis 
+                                    inicier en créant les interfaces du tutoriel tout en comprenant comment ce MVC communiquait pour afficher les informations à l'écran et récupérer les données sql. Puis ayant fini le tutoriel, mon tuteur de stage me demanda de perfectionner ces interfaces pour les lier entre elles et mettre en place une sécurité.</p>
                                      <span class="images_petit"><img src="images/" alt="" /></span>
                                     <hr class="major" />
                                     <h2>Projet du stage : Mise en place</h2>
@@ -61,12 +62,12 @@
                                     devra avoir de fonctionnalités obligatoires : </br>
                                     -Une méthode qui permettera la modification de l'etat d'un fichier préalablment inserer dans une base de donnée.</br>
                                     -Une méthode qui permettera à un utilisateur de pouvoir avoir accès à son fichier et modifier certains paramètres en cas de problème. </p>
-                                    <h3><u>Première méthode : GetEncours()</u></h3>
-                                    <p>Cette méthode est la plus simple à mettre en place. En effet il suffit juste de récupérer un fichier demandé dans une authentification via 2 paramètres (caisse, clé primaire) puis de l'afficher dans une page.
-                                    Dans cette page, on pourra trouver un lien qui donnera sur une page où on pourra modifier l'etat du fichier. Ce qui suis est le cheminement de la methode GetEncours()</p></br>
+                                    <h3><u>Projet du stage : Première approche</u></h3>
+                                    <p>Ce prototype du projet a été réalisé en amont du projet final Il a permis à mon tuteur de visualiser comment je voyais l'application web qu'il m'a demandé. On a discuté par rapport à ce prototype et il m'a indiqué ce qu'il voudrai pour la version
+                                    final.</p></br>
                                     
 				    <span class="images_petit"><img src="images/Accueil1.png" alt="" /></span></br>
-				    <p>Cette page est la barre d'action de la page principale. C'est à cet endroit que la méthode getEncours() sera lancé.</p></br>
+				    <p>Cette page est la barre d'action de la page principale. C'est à cet endroit que l'on pourra recupérer un encours inscrit dans la base de donnée.</p></br>
 				     <hr class="major" />
 				    <span class="images_petit"><img src="images/authentification1.png" alt="" /></span></br>
 				    Cette page permet de récuperer le detail d'un encours grâce au nom de la caisse et à la clé primaire de la table.  </br>
@@ -76,8 +77,20 @@
 				     <hr class="major" />	    
 				    <span class="images_petit"><img src="images/Methode.png" alt="" /></span></br>
 				    On peut considérer cette page comme une méthode edit(). Elle permet de récupérer la clé étrangère ID_etat, de la modifier ce qui permettera de mettre à jour son libelle qui se trouve dans une autre table.</br> 
-				    
-									
+				    <hr class="major" />
+						<h3><u>Projet du stage : Version final</u></h3>
+                                    <p>Cette version du projet est la conclusion de mon stage. Beaucoup plus simple que la version précedente, elle permet à un utilisateur de l'utiliser sans dificulté. C'est un point que j'ai appris
+                                    durant mon stage: il faut toujours penser comme un utilisateur qui ne connais pas forcément l'informatique et lui mettre à disposition une interface simple.</p></br>			
+                     <span class="images_petit"><img src="images/Site final.png" alt="" /></span></br>
+				    <p>Cette inerface est l'accueil du site, elle affiche tous les encours présent dans la base donnée. Sur le côté, on retrouve la possibilité d'ajouter un encours dans la base de donnée et maintenant il y a la possibilité
+				    de filtrer les encours présent dans la page afin d'afficher celui que l'on veux. Pour cela il suffit de connaitre l'ID du fichier. Après avoir trouvé son encours, une action modification permet d'ouvrir une nouvelle page.</p></br>
+				     <hr class="major" />
+				    <span class="images_petit"><img src="images/Modification.png" alt="" /></span></br>
+				    Cette page est l'endroit où toute modification de l'encours sera faite. L'utilisateur pourra editer son encours s'il lui manque un champ, actualiser son encours si le code motif de son encours est égal à 6, ça le redirigera sur une page. Si le code est égal à 7 ou 8 une autre page sera chargé. Si
+				    aucun de ces codes est présent, il y aura une redirection sur l'accueil avec un message indiquant qu'aucune modification n'est nécéssaire. Ensuite l'utilisateur pourra supprimer son encours s'il n'est plus nécéssaire. </br>
+				     
+                            
+                            
                             </section>
 
 						</div>
